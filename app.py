@@ -81,7 +81,7 @@ Hier wird gemessen, **was die Kapazität kostet**, wie nah Esau-Williams, **Krus
 )
 st.caption(
     "Setzt auf [kruskal-demo](https://github.com/sebastian-hanisch/kruskal-demo) und [constrained-mst-demo](https://github.com/sebastian-hanisch/constrained-mst-demo) auf; Esau-Williams ist die Baum-Schwester der "
-    "Savings-Heuristik aus [vrp-nachbarschaften-demo](https://github.com/sebastian-hanisch/vrp-nachbarschaften-demo). Geplante Nachfolger (nicht gebaut): Steiner-Baum, Prize-Collecting Steiner-Baum, Sensitivität, zufällige Spannbäume."
+    "Savings-Heuristik aus [vrp-nachbarschaften-demo](https://github.com/sebastian-hanisch/vrp-nachbarschaften-demo). Die Reihe geht weiter mit [steiner-tree-demo](https://github.com/sebastian-hanisch/steiner-tree-demo), [pcst-demo](https://github.com/sebastian-hanisch/pcst-demo), [mst-sensitivity-demo](https://github.com/sebastian-hanisch/mst-sensitivity-demo) und [random-spanning-tree-demo](https://github.com/sebastian-hanisch/random-spanning-tree-demo)."
 )
 
 with st.expander("So funktionieren die Verfahren", expanded=True):
@@ -335,6 +335,6 @@ Implementiert in `cmst_algorithm.py` (Verfahren), `cmst_scenario.py` (Instanzen)
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Spannbäume: vom Kruskal bis zum Zufallsbaum](https://sebastianhanisch.net/konzepte-spannbaum.html)."
 )

@@ -14,9 +14,9 @@ Kruskal (Wurzel)                                                                
  ├─ Gerichteter Spannbaum (Chu-Liu/Edmonds)                                                [gebaut: arborescence-demo]
  ├─ Bottleneck-/Grad-/Hop-beschränkter Spannbaum                                           [gebaut: constrained-mst-demo]
  │    └─ Kapazitierter MST                                                                 [DIESES STÜCK]
- ├─ Steiner-Baum → Prize-Collecting Steiner-Baum                                           [nicht gebaut]
- ├─ MST-Sensitivität & dynamischer MST                                                     [nicht gebaut]
- └─ Zufällige Spannbäume & Kirchhoff                                                       [nicht gebaut]
+ ├─ Steiner-Baum → Prize-Collecting Steiner-Baum                                           [gebaut: steiner-tree-demo, pcst-demo]
+ ├─ MST-Sensitivität & dynamischer MST                                                     [gebaut: mst-sensitivity-demo]
+ └─ Zufällige Spannbäume & Kirchhoff                                                       [gebaut: random-spanning-tree-demo]
 ```
 
 Ergebnis in Kürze: **Die Kapazität ist teuer und wirkt stufenweise: bei 12 Kunden (Depot am Rand, Einheitsbedarf) kostet Q = 2 im Median +47 % gegenüber dem MST, Q = 4 +13,5 %, Q = 8 +0,9 %, ab Q = 10 nichts mehr; der Stern (Q = 1) kostet +134 %. Esau-Williams trifft im Median das Optimum, aber nur in 52 bis 78 % der Instanzen den besten Baum (mittlere Lücke 0,5 bis 1,6 %, größte bis 10,8 %) - in Ortschaften nur in 6 % (mittlere Lücke 3,5 %). Kruskal mit Kapazität ist meist schlechter (48 bis 70 % der Instanzen, in Ortschaften 80 %), schlägt Esau-Williams aber in 4 bis 14 %. Die Lokalsuche trifft den besten Baum in 52 bis 90 % der Instanzen, steckt aber fest (Depot in der Mitte: +5,0 %).**
@@ -82,7 +82,7 @@ Das **Lehrbuchbeispiel** ist von Hand nachzurechnen: das Depot W links, C in der
 - **Exakt ist klein:** die Teilmengen-DP hat O(3^n) und wird bis n = 14 Kunden angeboten; Branch-Cut-and-Price (Uchoa u. a. 2008) löst deutlich größere Instanzen, ist hier nicht gebaut. Aufschläge bei n > 14 sind Abstände zwischen Heuristiken, keine Lücken zum Optimum.
 - **Ein Depot, eine Kapazität, ein Kabeltyp:** keine Kapazitätsstufen, keine mehreren Depots, keine Redundanz, kein Zeitverlauf; Einheits- oder Kleinbedarf 1–4; Q = 2 ist polynomiell (Matching), die Demo löst es trotzdem über die Partition.
 - **Synthetisches Modell:** Punkte im Quadrat, vollständiger Graph, Geländefaktor; keine echten Netze.
-- **Nicht gebaut:** Steiner-Baum, Prize-Collecting Steiner-Baum, Sensitivität, zufällige Spannbäume; Tabu-/GRASP-Varianten für den CMST.
+- **Nicht gebaut:** Tabu-/GRASP-Varianten für den CMST. (Die übrigen Stücke der Reihe - Steiner-Baum, Prize-Collecting Steiner-Baum, Sensitivität, zufällige Spannbäume - sind inzwischen gebaut.)
 
 ## Verifikation
 
@@ -111,4 +111,4 @@ python -m pytest tests -v
 - Papadimitriou, C. H. (1978). *The complexity of the capacitated tree problem.* Networks 8(3), 217–230 (NP-schwer schon bei Einheitsbedarf für 3 ≤ Q ≤ ⌊n/2⌋).
 - Uchoa, E., Fukasawa, R., Lysgaard, J., Pessoa, A., Poggi de Aragão, M., & Andrade, R. (2008). *Robust branch-cut-and-price for the capacitated minimum spanning tree problem over a large extended formulation.* Mathematical Programming 112, 443–472 (nur genannt, nicht gebaut; Autorenliste vor einer Zitierung gegen die Quelle prüfen).
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning.
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Spannbäume: vom Kruskal bis zum Zufallsbaum](https://sebastianhanisch.net/konzepte-spannbaum.html).
